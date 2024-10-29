@@ -8,6 +8,7 @@ use Cartalyst\Sentinel\Users\EloquentUser;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Laracasts\Presenter\PresentableTrait;
+use Modules\Iqreable\Traits\IsQreable;
 use Modules\Isite\Traits\Tokenable;
 use Modules\User\Entities\UserInterface;
 use Modules\User\Entities\UserToken;
@@ -21,7 +22,7 @@ use Modules\Core\Support\Traits\AuditTrait;
 
 class User extends EloquentUser implements UserInterface, AuthenticatableContract
 {
-  use PresentableTrait, Authenticatable, HasApiTokens, AuditTrait, RevisionableTrait, Tokenable, MediaRelation;
+  use PresentableTrait, Authenticatable, HasApiTokens, AuditTrait, RevisionableTrait, Tokenable, MediaRelation, IsQreable;
 
   public $repository = 'Modules\User\Repositories\UserRepository';
   public $entity = 'Modules\User\Entities\Sentinel\User';
