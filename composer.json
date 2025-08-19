@@ -1,0 +1,28 @@
+{
+    "name": "imagina/iuser",
+    "description": "",
+    "authors": [
+        {
+            "name": "Imagina Colombia",
+            "email": "soporte@imaginacolombia.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Iuser\\": "app/",
+            "Modules\\Iuser\\Database\\Factories\\": "database/factories/",
+            "Modules\\Iuser\\Database\\Seeders\\": "database/Seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Iuser\\Tests\\": "tests/"
+        }
+    }
+}
